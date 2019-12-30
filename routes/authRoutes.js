@@ -26,7 +26,7 @@ module.exports = (app) =>{
   );
   app.get('/google181d5db1eb9426de.html',
   (req, res) => {
-    res.sendFile('/home/ipercy/firstproject/server/google181d5db1eb9426de.html');
+    res.sendFile('../google181d5db1eb9426de.html');
   });
 
 
