@@ -1,4 +1,5 @@
 const passport = require('passport');
+const path = require('path');
 
 module.exports = (app) =>{
   app.get(
@@ -25,7 +26,7 @@ module.exports = (app) =>{
   );
   app.get('/google181d5db1eb9426de.html',
   (req, res) => {
-    res.sendFile('../google181d5db1eb9426de.html');
+    res.sendFile('/home/ipercy/firstproject/server/google181d5db1eb9426de.html');
   });
 
 
