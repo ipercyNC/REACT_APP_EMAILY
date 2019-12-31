@@ -24,10 +24,5 @@ module.exports = (app) =>{
       res.send(req.user);
     }
   );
-  app.get('/google181d5db1eb9426de.html',
-  (req, res) => {
-    res.sendFile('../google181d5db1eb9426de.html');
-  });
-
 
 };

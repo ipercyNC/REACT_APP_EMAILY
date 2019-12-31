@@ -2,18 +2,16 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
-//const keys = require('./config/keys.js');
+const keys = require('./config/keys');
 require('./models/User');
-//require('./services/passport');
-
-const path = require('path');
-const dirPath = path.join(__dirname, '/google181d5db1eb9426de.html');
+require('./services/passport');
 
 
-//mongoose.connect(keys.mongoURI);
+
+mongoose.connect(keys.mongoURI);
 
 const app = express();
-/*
+
 app.use(
   cookieSession({
     maxAge: 30 * 24 * 60 * 60 * 1000, //milliseconds in 30 days
@@ -22,12 +20,8 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
-*/
-//require('./routes/authRoutes')(app);
 
-app.get('/google181d5db1eb9426de.html',
-(req, res) => {
-  res.sendFile(dirPath);
-});
+require('./routes/authRoutes')(app);
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
